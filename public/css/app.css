@@ -1,4 +1,8 @@
 @import 'plugins/bootstrap.min.css';
-@import 'landing.css';
+/* @import 'landing.css'; */
 @import 'style-preset.css';
 @import 'style.css';
+@import '../fonts/material.css';
+@import '../fonts/fontawesome.css';
+@import '../fonts/feather.css';
+@import '../fonts/tabler-icons.min.css';

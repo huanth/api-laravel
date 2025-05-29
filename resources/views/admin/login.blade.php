@@ -114,16 +114,13 @@
     </div>
     <!-- [ Main Content ] end -->
     <!-- Required Js -->
-    <script src="../js/plugins/popper.min.js"></script>
-    <script src="../js/plugins/simplebar.min.js"></script>
-    <script src="../js/plugins/bootstrap.min.js"></script>
-    <script src="../js/fonts/custom-font.js"></script>
-    <script src="../js/fonts/custom-ant-icon.js"></script>
-    <script src="../js/pcoded.js"></script>
-    <script src="../js/plugins/feather.min.js"></script>
-
     <script src="{{ asset('js/app.js') }}"></script>
-
+    <script src="{{ asset('js/plugins/popper.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/fonts/custom-font.js') }}"></script>
+    <script src="{{ asset('js/fonts/custom-ant-icon.js') }}"></script>
+    <script src="{{ asset('js/pcoded.js') }}"></script>
+    <script src="{{ asset('js/plugins/feather.min.js') }}"></script>
 
     <script>
         layout_change('light');
