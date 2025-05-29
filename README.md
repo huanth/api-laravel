@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://laravel.com/img/logomark.min.svg" alt="Laravel Logo" width="100">
+</p>
+
 # Laravel API Project
 
 This is a Laravel-based API project.
@@ -13,7 +17,7 @@ This is a Laravel-based API project.
 
 1. **Clone the repository:**
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/huanth/api-laravel
    cd api-laravel
    ```
 
