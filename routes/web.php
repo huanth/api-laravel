@@ -34,6 +34,8 @@ Route::prefix('admin')->middleware('admin')->group(function () {
     Route::post('/change-password', [AdminController::class, 'changePassword'])->name('admin.change-password');
 
     Route::get('/page1', [AdminController::class, 'page1'])->name('admin.page1');
+
+    Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
     Route::post('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 });
 
