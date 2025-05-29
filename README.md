@@ -41,17 +41,25 @@ This is a Laravel-based API project.
    php artisan key:generate
    ```
 
-6. **Run migrations:**
+6. **Restore the database (optional):**
+   - A backup SQL file is available in the `backup_db` folder:  
+     `backup_db/api-laravel.sql`
+   - You can import it using phpMyAdmin or the MySQL command line:
+     ```sh
+     mysql -u your_username -p api-laravel < backup_db/api-laravel.sql
+     ```
+
+7. **Run migrations (if not using the backup):**
    ```sh
    php artisan migrate
    ```
 
-7. **Build frontend assets:**
+8. **Build frontend assets:**
    ```sh
    npm run build
    ```
 
-8. **Start the development server:**
+9. **Start the development server:**
    ```sh
    php artisan serve
    ```
@@ -69,6 +77,7 @@ php artisan test
 - `resources/` - Views and frontend assets
 - `public/` - Publicly accessible files
 - `config/` - Configuration files
+- `backup_db/` - Database backup files
 
 ## License
 
