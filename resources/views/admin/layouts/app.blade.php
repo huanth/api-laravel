@@ -46,8 +46,8 @@
                             </svg>
                         </i>
                     </li>
-                    <li class="pc-item nav-link @if(request()->routeIs('admin.page1')) active @endif">
-                        <a href="{{ route('admin.page1') }}" class="pc-link">
+                    <li class="pc-item nav-link @if(request()->routeIs('admin.apis')) active @endif">
+                        <a href="{{ route('admin.apis') }}" class="pc-link">
                             <span class="pc-micon">
                                 <svg class="pc-icon">
                                     <use xlink:href="#api"></use>
@@ -56,6 +56,39 @@
                             <span class="pc-mtext">List APIs</span>
                         </a>
                     </li>
+
+                    <!-- If user is admin -->
+                    @if(auth()->user()->is_admin)
+                    <li class="pc-item pc-caption">
+                        <label class="" data-i18n="Widget">Admin Panel</label>
+                        <i class="pc-micon">
+                            <svg class="pc-icon">
+                                <use xlink:href="#line-chart"></use>
+                            </svg>
+                        </i>
+                    </li>
+                    <li class="pc-item nav-link @if(request()->routeIs('admin.users')) active @endif">
+                        <a href="{{ route('admin.users') }}" class="pc-link">
+                            <span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                            </span>
+                            <span class="pc-mtext">Users Manager</span>
+                        </a>
+                    </li>
+                    <li class="pc-item nav-link @if(request()->routeIs('admin.settings')) active @endif">
+                        <a href="{{ route('admin.settings') }}" class="pc-link">
+                            <span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#setting"></use>
+                                </svg>
+                            </span>
+                            <span class="pc-mtext">Settings</span>
+                        </a>
+                    </li>
+
+                    @endif
                 </ul>
 
             </div>
@@ -191,23 +224,6 @@
 
     <div class="pc-container">
         <div class="pc-content">
-            <!-- [ breadcrumb ] start -->
-            <div class="page-header">
-                <div class="page-block">
-                    <div class="row align-items-center">
-                        <div class="col-md-12">
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="../dashboard/index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
-                                <li class="breadcrumb-item" aria-current="page">Home</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- [ breadcrumb ] end -->
-
             @yield('content')
 
         </div>

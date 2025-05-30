@@ -33,10 +33,13 @@ Route::prefix('admin')->middleware('admin')->group(function () {
     Route::get('/change-password', [AdminController::class, 'showChangePasswordForm'])->name('admin.change-password.form');
     Route::post('/change-password', [AdminController::class, 'changePassword'])->name('admin.change-password');
 
-    Route::get('/page1', [AdminController::class, 'page1'])->name('admin.page1');
-
     Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
     Route::post('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
+
+    Route::get('/apis', [AdminController::class, 'apis'])->name('admin.apis');
+
+    Route::get('/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::get('/settings', [AdminController::class, 'settings'])->name('admin.settings');
 });
 
 // Route login admin (trang login riêng)

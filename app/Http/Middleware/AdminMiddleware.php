@@ -17,14 +17,12 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (!Auth::check()) {
-            // Chưa đăng nhập thì redirect về login
             return redirect('/admin/login');
         }
 
-        if (!Auth::user()->is_admin) {
-            // Đã đăng nhập nhưng không phải admin thì hiện thông báo
-            abort(403, 'Bạn không phải admin.');
-        }
+        // if (!Auth::user()->is_admin) {
+        //     abort(403, 'Bạn không phải admin.');
+        // }
 
         return $next($request);
     }
